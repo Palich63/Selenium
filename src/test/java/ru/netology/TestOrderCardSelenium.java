@@ -31,7 +31,7 @@ public class TestOrderCardSelenium {
     }
 
     @Test
-    void shouldTestOrderCard() {
+    void shouldTestOrderCardSelenium() {
         driver.get("http://localhost:9999");
         WebElement form = driver.findElement(By.cssSelector("[method=post]"));
         form.findElement(By.cssSelector("[name=name]")).sendKeys("Андрей");
