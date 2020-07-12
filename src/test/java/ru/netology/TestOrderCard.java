@@ -17,7 +17,7 @@ public class TestOrderCard {
     @BeforeAll
     static void setUpAll() {
 
-        System.setProperty("webdriver.chrome.driver", "src\\test\\resources\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
     }
 
     @BeforeEach
