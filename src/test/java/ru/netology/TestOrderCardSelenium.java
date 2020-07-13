@@ -9,12 +9,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class TestOrderCardSelenium {
     private WebDriver driver;
+    private static ChromeOptions options;
 
     @BeforeAll
     public static void setUpAll() {
@@ -25,11 +27,14 @@ public class TestOrderCardSelenium {
 //            System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriverLinux.exe");
 //        }
         WebDriverManager.chromedriver().setup();
+        options = new ChromeOptions();
+        options.addArguments("--headless");
     }
 
     @BeforeEach
     void setUp() {
-        driver = new ChromeDriver("http://localhost:9515", DesiredCapabilities.chrome());
+        driver = new ChromeDriver(options);
+        driver.get("http://localhost:9999");
     }
 
     @AfterEach
