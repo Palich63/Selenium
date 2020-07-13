@@ -18,12 +18,6 @@ public class TestOrderCardSelenium {
 
     @BeforeAll
     public static void setUpAll() {
-//        if (System.getProperty("os.name") == "Windows 10") {
-//            System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
-//        }
-//        if (System.getProperty("os.name") == "Linux") {
-//            System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriverLinux.exe");
-//        }
         WebDriverManager.chromedriver().setup();
         options = new ChromeOptions();
         options.addArguments("--headless");
