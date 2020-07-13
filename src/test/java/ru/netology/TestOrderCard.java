@@ -37,7 +37,7 @@ public class TestOrderCard {
 ////
 ////        webdriver.Chrome(ChromeDriverManager().install())
 //                WebDriverManager.chromedriver().clearResolutionCache().setup();
-        WebDriverManager.chromedriver().setup();
+//        WebDriverManager.chromedriver().setup();
 //        WebDriver driver = new RemoteWebDriver("http://localhost:9515", DesiredCapabilities.chrome());
 //        driver.get("http://www.google.com");
     }
