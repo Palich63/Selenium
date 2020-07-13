@@ -10,6 +10,8 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
@@ -17,7 +19,8 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class TestOrderCard {
-    private WebDriverRunner driver;
+    private ChromeDriver driver;
+    private static ChromeOptions options;
 
     @BeforeAll
     static void setUpAll() {
@@ -38,6 +41,8 @@ public class TestOrderCard {
 ////        webdriver.Chrome(ChromeDriverManager().install())
 //                WebDriverManager.chromedriver().clearResolutionCache().setup();
         WebDriverManager.chromedriver().setup();
+        options = new ChromeOptions();
+        options.addArguments("--headless");
 //        WebDriver driver = new RemoteWebDriver("http://localhost:9515", DesiredCapabilities.chrome());
 //        driver.get("http://www.google.com");
     }
@@ -45,7 +50,8 @@ public class TestOrderCard {
 
     @BeforeEach
     void setUp() {
-        driver = new WebDriverRunner();
+        driver = new ChromeDriver(options);
+        driver.get("http://localhost:9999");
     }
 
     @AfterEach
