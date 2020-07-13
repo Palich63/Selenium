@@ -15,7 +15,7 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class TestOrderCard {
     private ChromeDriver driver;
-    private static ChromeOptions options;
+//    private static ChromeOptions options;
 
     @BeforeAll
     static void setUpAll() {
@@ -36,8 +36,8 @@ public class TestOrderCard {
 ////        webdriver.Chrome(ChromeDriverManager().install())
 //                WebDriverManager.chromedriver().clearResolutionCache().setup();
         WebDriverManager.chromedriver().setup();
-        options = new ChromeOptions();
-        options.addArguments("--headless");
+//        options = new ChromeOptions();
+//        options.addArguments("--headless");
 //        WebDriver driver = new RemoteWebDriver("http://localhost:9515", DesiredCapabilities.chrome());
 //        driver.get("http://www.google.com");
     }
@@ -45,7 +45,7 @@ public class TestOrderCard {
 
     @BeforeEach
     void setUp() {
-        driver = new ChromeDriver(options);
+        driver = new ChromeDriver();
         driver.get("http://localhost:9999");
     }
 
