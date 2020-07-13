@@ -16,12 +16,13 @@ public class TestOrderCard {
 
     @BeforeAll
     static void setUpAll() {
-        if (System.getProperty("os.name") == "Windows 10") {
-            System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
-        }
-        if (System.getProperty("os.name") == "Linux") {
+//        if (System.getProperty("os.name") == "Linux") {
+//            System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
+//        }
+//        if (System.getProperty("os.name") == "Windows 10") {
             System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriverLinux.exe");
-        }
+
+//        }
     }
 
 
@@ -38,6 +39,8 @@ public class TestOrderCard {
 
     @Test
     void shouldTestOrderCard() {
+//        System.out.println(System.getProperty("os.name"));
+
         open("http://localhost:9999");
         SelenideElement form = $("[method='post']");
         form.$("[name='name']").setValue("Андреев");
