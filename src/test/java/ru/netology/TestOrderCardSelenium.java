@@ -23,7 +23,7 @@ public class TestOrderCardSelenium {
 //        if (System.getProperty("os.name") == "Linux") {
 //            System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriverLinux.exe");
 //        }
-        WebDriverManager.chromedriver().setup();
+//        WebDriverManager.chromedriver().setup();
     }
 
     @BeforeEach
