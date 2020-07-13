@@ -6,7 +6,6 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -44,7 +43,6 @@ public class TestOrderCardSelenium {
 
     @Test
     void shouldTestOrderCardSelenium() {
-        driver.get("http://localhost:9999");
         WebElement form = driver.findElement(By.cssSelector("[method=post]"));
         form.findElement(By.cssSelector("[name=name]")).sendKeys("Андрей");
         form.findElement(By.cssSelector("[name=phone]")).sendKeys("+79998887755");

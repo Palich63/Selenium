@@ -1,20 +1,20 @@
 package ru.netology;
 
 import com.codeborne.selenide.Condition;
+import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.SelenideElement;
+import com.codeborne.selenide.WebDriverRunner;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class TestOrderCard {
-    private ChromeDriver driver;
+    private WebDriverRunner driver;
 //    private static ChromeOptions options;
 
     @BeforeAll
@@ -35,6 +35,7 @@ public class TestOrderCard {
 ////
 ////        webdriver.Chrome(ChromeDriverManager().install())
 //                WebDriverManager.chromedriver().clearResolutionCache().setup();
+//        WebDriverRunner.getWebDriver();
         WebDriverManager.chromedriver().setup();
 //        options = new ChromeOptions();
 //        options.addArguments("--headless");
@@ -45,8 +46,9 @@ public class TestOrderCard {
 
     @BeforeEach
     void setUp() {
-        driver = new ChromeDriver();
-        driver.get("http://localhost:9999");
+        driver = new WebDriverRunner();
+        Configuration.headless = true;
+//        driver.get("http://localhost:9999");
     }
 
     @AfterEach
