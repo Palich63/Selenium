@@ -3,10 +3,15 @@ package ru.netology;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import com.codeborne.selenide.WebDriverRunner;
+import io.github.bonigarcia.wdm.WebDriverManager;
+import io.github.bonigarcia.wdm.managers.ChromeDriverManager;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
@@ -20,9 +25,18 @@ public class TestOrderCard {
 //            System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
 //        }
 //        if (System.getProperty("os.name") == "Windows 10") {
-            System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriverLinux.exe");
+//             System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriverLinux.exe");
 
 //        }
+//        WebDriverManager.chromedriver().clearResolutionCache().setup();
+
+//        WebDriver driver = new RemoteWebDriver("http://localhost:9515", DesiredCapabilities.chrome());
+//        driver.get("http://www.google.com");
+
+//        from webDriver.manager.chrome import ChromeDriverManager
+//
+//        webdriver.Chrome(ChromeDriverManager().install())
+                WebDriverManager.chromedriver().clearResolutionCache().setup();
     }
 
 
