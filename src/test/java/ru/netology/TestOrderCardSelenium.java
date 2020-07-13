@@ -1,5 +1,6 @@
 package ru.netology;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -16,12 +17,13 @@ public class TestOrderCardSelenium {
 
     @BeforeAll
     static void setUpAll() {
-        if (System.getProperty("os.name") == "Windows 10") {
-            System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
-        }
-        if (System.getProperty("os.name") == "Linux") {
-            System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriverLinux.exe");
-        }
+//        if (System.getProperty("os.name") == "Windows 10") {
+//            System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
+//        }
+//        if (System.getProperty("os.name") == "Linux") {
+//            System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriverLinux.exe");
+//        }
+        WebDriverManager.chromedriver().setup();
     }
 
     @BeforeEach

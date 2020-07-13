@@ -21,22 +21,23 @@ public class TestOrderCard {
 
     @BeforeAll
     static void setUpAll() {
-//        if (System.getProperty("os.name") == "Linux") {
-//            System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
-//        }
-//        if (System.getProperty("os.name") == "Windows 10") {
-//             System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriverLinux.exe");
-
-//        }
-//        WebDriverManager.chromedriver().clearResolutionCache().setup();
-
-//        WebDriver driver = new RemoteWebDriver("http://localhost:9515", DesiredCapabilities.chrome());
-//        driver.get("http://www.google.com");
-
-//        from webDriver.manager.chrome import ChromeDriverManager
+////        if (System.getProperty("os.name") == "Linux") {
+////            System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
+////        }
+////        if (System.getProperty("os.name") == "Windows 10") {
+////             System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriverLinux.exe");
 //
-//        webdriver.Chrome(ChromeDriverManager().install())
-                WebDriverManager.chromedriver().clearResolutionCache().setup();
+////        }
+////        WebDriverManager.chromedriver().clearResolutionCache().setup();
+//
+////        WebDriver driver = new RemoteWebDriver("http://localhost:9515", DesiredCapabilities.chrome());
+////        driver.get("http://www.google.com");
+//
+////        from webDriver.manager.chrome import ChromeDriverManager
+////
+////        webdriver.Chrome(ChromeDriverManager().install())
+//                WebDriverManager.chromedriver().clearResolutionCache().setup();
+        WebDriverManager.chromedriver().setup();
     }
 
 
