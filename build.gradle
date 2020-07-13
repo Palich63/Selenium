@@ -16,7 +16,7 @@ repositories {
 }
 
 dependencies {
-//    testCompile("io.github.bonigarcia:webdrivermanager:4.0.0")
+    testCompile("io.github.bonigarcia:webdrivermanager:4.0.0")
     testImplementation 'org.junit.jupiter:junit-jupiter:5.6.1'
     testImplementation 'com.codeborne:selenide:5.13.0'
 }

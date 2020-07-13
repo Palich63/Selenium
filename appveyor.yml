@@ -10,7 +10,7 @@ build: off
 
 install:
   - java -jar ./artifacts/app-order.jar &
-  - java -jar ./src/test/resources/webdrivermanager-4.0.0-fat.jar
+  - java -jar ./src/test/resources/webdrivermanager-4.0.0-fat.jar &
 
 build_script:
   - chmod +x gradlew
