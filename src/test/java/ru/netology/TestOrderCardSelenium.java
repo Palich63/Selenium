@@ -16,7 +16,12 @@ public class TestOrderCardSelenium {
 
     @BeforeAll
     static void setUpAll() {
-        System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
+        if (System.getProperty("os.name") == "Windows 10") {
+            System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
+        }
+        if (System.getProperty("os.name") == "Linux") {
+            System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriverLinux.exe");
+        }
     }
 
     @BeforeEach
