@@ -16,7 +16,7 @@ public class TestOrderCardSelenium {
     private WebDriver driver;
 
     @BeforeAll
-    static void setUpAll() {
+    public static void setUpAll() {
 //        if (System.getProperty("os.name") == "Windows 10") {
 //            System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
 //        }
