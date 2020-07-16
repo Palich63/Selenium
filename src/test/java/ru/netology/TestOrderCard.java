@@ -1,37 +1,13 @@
 package ru.netology;
 
 import com.codeborne.selenide.Condition;
-import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.SelenideElement;
-import com.codeborne.selenide.WebDriverRunner;
-import io.github.bonigarcia.wdm.WebDriverManager;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 
 public class TestOrderCard {
-    private WebDriverRunner driver;
-
-    @BeforeAll
-    static void setUpAll() {
-        WebDriverManager.chromedriver().setup();
-        Configuration.headless = true;
-    }
-
-
-    @BeforeEach
-    void setUp() {
-        driver = new WebDriverRunner();
-    }
-
-    @AfterEach
-    void tearDown() {
-        driver = null;
-    }
 
     @Test
     void shouldTestOrderCard() {
